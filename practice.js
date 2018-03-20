@@ -119,8 +119,8 @@ contains(names, 'Colt', function(result){
 
 function uniq(arr, cb){
   var modArr = [];
-  arr.filter(function(val, index, arr){
-    if(arr.indexOf(val) === index){
+  arr.filter(function(val, i){
+    if (arr.indexOf(val) === i){
       modArr.push(val);
     }
   }); cb(modArr);
@@ -142,9 +142,9 @@ uniq(names, function(uniqArr){
 */
 
 function each(arr, cb){
-  arr.forEach(function(name, i , arr){
+  arr.forEach(function(name, i, arr){
     cb(name, i);
-  }); 
+  });
 }
 
 // Do not edit the code below.
